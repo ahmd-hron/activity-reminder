@@ -1,0 +1,1 @@
+enum GameNetworkType { offile, online }
