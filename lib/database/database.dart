@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:seriese_reminders/core/enums/saveable.dart';
 import 'package:sqflite/sqflite.dart' as sql;
 import 'package:path/path.dart' as path;
@@ -7,8 +6,8 @@ class DB {
   DB._();
   static final DB instance = DB._();
 
-  String _dbName = 'todoList';
-  String _todoTable = 'todos';
+  static const String _dbName = 'todoList';
+  static const String _todoTable = 'todos';
 
   Future<sql.Database> get _openeDatabase async {
     final rawPath = await sql.getDatabasesPath();
