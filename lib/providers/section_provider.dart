@@ -4,12 +4,12 @@ import 'package:seriese_reminders/core/static/app_sections.dart';
 import 'package:seriese_reminders/models/section.dart';
 
 class SectionsProvider with ChangeNotifier {
-  final List<Section> _allSections = [];
+  final List<Section> _allSections = appSections;
   final List<Section> _sections = [];
 
   List<Section> get sections {
-    if (_sections.isEmpty) _setRandomSections();
-    return [..._sections];
+    // if (_sections.isEmpty) _setRandomSections();
+    return [..._allSections];
   }
 
   List<Section> get allSections {

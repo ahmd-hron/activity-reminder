@@ -16,23 +16,26 @@ class SectionView extends StatelessWidget {
           topRight: Radius.circular(25),
           topLeft: Radius.circular(25),
         ),
-        child: GridTile(
-          key: ValueKey(section.id),
-          footer: Container(
-            alignment: Alignment.center,
-            height: 30,
-            color: Colors.black.withOpacity(0.6),
-            child: Text(
-              section.title,
-              style: const TextStyle(color: Colors.white),
+        child: InkWell(
+          onTap: () => Navigator.of(context).pushNamed(section.routeName),
+          child: GridTile(
+            key: ValueKey(section.id),
+            footer: Container(
+              alignment: Alignment.center,
+              height: 30,
+              color: Colors.black.withOpacity(0.6),
+              child: Text(
+                section.title,
+                style: const TextStyle(color: Colors.white),
+              ),
             ),
-          ),
-          child: SizedBox(
-            child: ClipRRect(
-              child: Image.network(
-                section.imageUrl,
-                errorBuilder: (context, error, stackTrace) =>
-                    const Text('Failed getting image'),
+            child: SizedBox(
+              child: ClipRRect(
+                child: Image.network(
+                  section.imageUrl,
+                  errorBuilder: (context, error, stackTrace) =>
+                      const Text('Failed getting image'),
+                ),
               ),
             ),
           ),
