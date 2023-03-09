@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:seriese_reminders/providers/games_provider.dart';
-import 'package:seriese_reminders/providers/section_provider.dart';
-import 'package:seriese_reminders/providers/theme_provider.dart';
-import 'package:seriese_reminders/screen/home/home_screen.dart';
-import 'package:seriese_reminders/screen/loading/loading_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/books/books_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/favorites/favorites_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/gaming/gaming_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/hobbies/hobbies_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/learn/learn_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/movies/movies_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/series/series_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/todo/todo_screen.dart';
-import 'package:seriese_reminders/screen/sections%20screens/work/work_screen.dart';
-import 'package:seriese_reminders/util/size_config.dart';
+import 'package:seriese_reminders/business_logic/providers/games_provider.dart';
+import 'package:seriese_reminders/business_logic/providers/section_provider.dart';
+import 'package:seriese_reminders/business_logic/providers/theme_provider.dart';
+import 'package:seriese_reminders/ui/screen/home/home_screen.dart';
+import 'package:seriese_reminders/ui/screen/loading/loading_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/books/books_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/favorites/favorites_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/gaming/gaming_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/hobbies/hobbies_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/learn/learn_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/movies/movies_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/series/series_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/todo/todo_screen.dart';
+import 'package:seriese_reminders/ui/screen/sections%20screens/work/work_screen.dart';
+import 'package:seriese_reminders/business_logic/util/size_config.dart';
 
 void main(List<String> args) {
   runApp(const SeriesApp());
