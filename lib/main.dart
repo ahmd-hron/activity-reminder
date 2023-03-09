@@ -29,22 +29,25 @@ class SeriesApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (ctx) => SectionsProvider()),
         ChangeNotifierProvider(create: (ctx) => GamesProvider()),
+        ChangeNotifierProvider(create: (ctx) => ThemeProvider()),
       ],
-      child: MaterialApp(
-        theme: ThemeProvider.appTheme,
-        home: const HomeScreen(),
-        debugShowCheckedModeBanner: false,
-        routes: {
-          GamingScreen.routeName: (ctx) => const GamingScreen(),
-          MoviesScreen.routeName: (ctx) => const MoviesScreen(),
-          SeriesScreen.routeName: (ctx) => const SeriesScreen(),
-          BooksScreen.routeName: (ctx) => const BooksScreen(),
-          FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
-          HobbiesScreen.routeName: (ctx) => const HobbiesScreen(),
-          LearnScreen.routeName: (ctx) => const LearnScreen(),
-          TodoScreen.routeName: (ctx) => const TodoScreen(),
-          WorkScreen.routeName: (ctx) => const WorkScreen(),
-        },
+      child: Consumer<ThemeProvider>(
+        builder: (context, value, child) => MaterialApp(
+          theme: value.appTheme,
+          home: const HomeScreen(),
+          debugShowCheckedModeBanner: false,
+          routes: {
+            GamingScreen.routeName: (ctx) => const GamingScreen(),
+            MoviesScreen.routeName: (ctx) => const MoviesScreen(),
+            SeriesScreen.routeName: (ctx) => const SeriesScreen(),
+            BooksScreen.routeName: (ctx) => const BooksScreen(),
+            FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
+            HobbiesScreen.routeName: (ctx) => const HobbiesScreen(),
+            LearnScreen.routeName: (ctx) => const LearnScreen(),
+            TodoScreen.routeName: (ctx) => const TodoScreen(),
+            WorkScreen.routeName: (ctx) => const WorkScreen(),
+          },
+        ),
       ),
     );
   }

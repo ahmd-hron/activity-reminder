@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ThemeProvider {
-  static final appTheme = ThemeData(
+class ThemeProvider with ChangeNotifier {
+  final Color dropDownColor = const Color.fromARGB(255, 173, 196, 237);
+
+  final appTheme = ThemeData(
     primaryColor: const Color.fromRGBO(243, 103, 102, 1),
     primarySwatch: Colors.purple,
     backgroundColor: Colors.grey,
